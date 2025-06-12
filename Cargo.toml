@@ -1,0 +1,16 @@
+[package]
+name = "polars-fin"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "polars_fin"
+crate-type= ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.24.2", features = ["extension-module", "abi3-py39"] }
+pyo3-polars = { version = "0.21.0", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+polars = { version = "0.48.0", features = ["dtype-struct"], default-features = false }
+polars-arrow = { version = "0.48.0", default-features = false }
+
