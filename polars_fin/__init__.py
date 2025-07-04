@@ -74,8 +74,10 @@ def cap_gains(
         │ 100.0     ┆ 700.0          ┆ 7.0           ┆ 0.0             ┆ 0.0           │
         └───────────┴────────────────┴───────────────┴─────────────────┴───────────────┘
     """
-    qty = pl.col(qty).cast(pl.Float64)
-    ttype = pl.col(ttype).str.to_lowercase()
+    qty = qty if isinstance(qty, pl.Expr) else pl.col(qty)
+    qty = qty.cast(pl.Float64)
+    ttype = ttype if isinstance(ttype, pl.Expr) else pl.col(ttype)
+    ttype = ttype.str.to_lowercase()
     return register_plugin_function(
         args=[ttype, qty, amt],
         plugin_path=LIB,
