@@ -70,7 +70,7 @@ fn cap_gains(inputs: &[Series]) -> PolarsResult<Series> {
     let s_cost_units_sold = Series::new("cost_units_sold".into(), &cost_units_sold_vec);
     let s_realized_gain = Series::new("realized_gain".into(), &realized_gain_vec);
 
-    let fields = &vec![
+    let fields = [
         s_cumul_qty,
         s_cumul_avg_cost,
         s_avg_unit_cost,
