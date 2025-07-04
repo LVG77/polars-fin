@@ -7,3 +7,7 @@ venv
 *.dll
 *.pyd
 
+# temp files
+temp_*.py
+.polars_config*
+performance_results.csv
