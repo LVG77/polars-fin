@@ -46,8 +46,10 @@ jobs:
 
       - name: Set up Rust
         run: rustup show
-      - name: Install rustfmt
-        run: rustup component add rustfmt
+      - name: Install Rust components
+        run: |
+          rustup component add rustfmt
+          rustup component add clippy
       - uses: mozilla-actions/sccache-action@v0.0.6
       - run: make venv
       - run: make pre-commit
@@ -68,8 +70,10 @@ jobs:
 
       - name: Set up Rust
         run: rustup show
-      - name: Install rustfmt
-        run: rustup component add rustfmt
+      - name: Install Rust components
+        run: |
+          rustup component add rustfmt
+          rustup component add clippy
       - uses: mozilla-actions/sccache-action@v0.0.6
       - run: make venv
       - run: .venv/bin/python -m pip install polars==1.8.0  # min version
