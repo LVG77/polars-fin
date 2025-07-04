@@ -1,6 +1,7 @@
 # polars-fin
 
 [![PyPI](https://img.shields.io/pypi/v/polars-fin.svg)](https://pypi.org/project/polars-fin/)
+[![Tests](https://github.com/LVG77/polars-fin/actions/workflows/publish.yml/badge.svg)](https://github.com/LVG77/polars-fin/actions/workflows/publish.yml)
 [![Changelog](https://img.shields.io/github/v/release/lvg77/polars-fin?include_prereleases&label=changelog)](https://github.com/lvg77/polars-fin/releases)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/lvg77/fin-polars/blob/master/LICENSE)
 
